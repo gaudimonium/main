@@ -9,13 +9,20 @@ RSYNC ?= rsync
 SRC_DIR = .
 BLD_DIR = public
 
+env:
+	-$(DEVD) --version
+	-$(HUGO) version
+	-$(MODD) --version
+	-$(PERU) --version
+	-$(RSYNC) --version
+
 deps:
 	$(PERU) sync
 
 dev-server:
 	$(DEVD) $(DEVD_OPTS)
 
-build:
+build: env
 	mkdir -p $(BLD_DIR)
 	$(RSYNC) -avP --delete $(SRC_DIR)/static/* $(BLD_DIR)/
 	$(HUGO) $(HUGO_OPTS)
