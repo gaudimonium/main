@@ -3,5 +3,11 @@
   command = "make build"
   publish = "public"
 
+[context.production.environment]
+HUGO_VERSION = "0.55.6"
+
 [context.deploy-preview]
   command = "make build"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.55.6"
