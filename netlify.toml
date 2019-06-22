@@ -1,0 +1,7 @@
+[build]
+  base = "."
+  command = "make build"
+  publish = "public"
+
+[context.deploy-preview]
+  command = "make build"
