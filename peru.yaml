@@ -1,0 +1,17 @@
+# Manage dependencies with Peru
+# https://github.com/buildinspace/peru
+---
+
+imports:
+  hugo-theme-syna: themes/syna
+  netlify-cms: static/admin
+
+git module hugo-theme-syna:
+  url: https://gitlab.com/gaudimonium/components/hugo-theme-syna.git
+  rev: 2581b87a4528a8f4cdfaf7a9c322d161b96b4fd7
+
+git module netlify-cms:
+  url: https://gitlab.com/gaudimonium/components/netlify-cms.git
+  pick:
+    - index.html
+  rev: 41aba68ed3bd13089a66dba127bd35fe135fd2b9
