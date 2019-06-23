@@ -75,15 +75,15 @@ collections:
                   - {label: "Favicon Icon Sizes", name: "favicon_ico_sizes", widget: "string", default: "16x16 32x32"}
                   - label: "Favicon .ico"
                     name: "favicon_ico_sizes"
-                    widget: "hidden"
+                    widget: "string"
                     default: "images/favicon.ico"
                   - label: "Favicon .png"
                     name: "favicon_png"
-                    widget: "hidden"
+                    widget: "string"
                     default: "images/favicon.png"
                   - label: "Favicon .svg"
                     name: "favicon_svg"
-                    widget: "hidden"
+                    widget: "string"
                     default: "images/favicon.svg"
 
               - label: "Color Settings"
