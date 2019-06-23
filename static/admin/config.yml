@@ -1,0 +1,20 @@
+###
+# Configuration for NetlifyCMS
+# https://www.netlifycms.org/docs/configuration-options/
+###
+
+## https://www.netlifycms.org/docs/authentication-backends
+backend:
+  name: git-gateway
+
+## Make sure the backend repo host is supported before enabling this.
+# publish_mode: editorial_workflow
+
+site_url: "https://example.com"
+
+## These paths should match where the chosen theme looks for images.
+media_folder: ""
+public_folder: ""
+
+## https://www.netlifycms.org/docs/collection-types/
+collections:
