@@ -98,27 +98,27 @@ collections:
                       config:
                         multiple: false
 
-          - label: "Color Settings"
-            name: "params.colors"
-            widget: "object"
-            fields:
-              - {label: "Primary", name: "primary", widget: "string", default: "#00838F"}
-              - {label: "Secondary", name: "secondary", widget: "string", default: "#868e96"}
-              - {label: "Success", name: "success", widget: "string", default: "#008f54"}
-              - {label: "Info", name: "info", widget: "string", default: "#00c9dc"}
-              - {label: "Warning", name: "warning", widget: "string", default: "#fdf314"}
-              - {label: "Danger", name: "danger", widget: "string", default: "#dc1200"}
-              - {label: "Light", name: "light", widget: "string", default: "#f8f9fa"}
-              - {label: "Dark", name: "dark", widget: "string", default: "#343a40"}
+              - label: "Color Settings"
+                name: "params.colors"
+                widget: "object"
+                fields:
+                  - {label: "Primary", name: "primary", widget: "string", default: "#00838F"}
+                  - {label: "Secondary", name: "secondary", widget: "string", default: "#868e96"}
+                  - {label: "Success", name: "success", widget: "string", default: "#008f54"}
+                  - {label: "Info", name: "info", widget: "string", default: "#00c9dc"}
+                  - {label: "Warning", name: "warning", widget: "string", default: "#fdf314"}
+                  - {label: "Danger", name: "danger", widget: "string", default: "#dc1200"}
+                  - {label: "Light", name: "light", widget: "string", default: "#f8f9fa"}
+                  - {label: "Dark", name: "dark", widget: "string", default: "#343a40"}
 
-          # Optional, global disable switch for fontawesome related files
-          # For custom fontawesome js files use the custom.js method
-          - label: "FontAwesome Settings"
-            name: "params.fontawesome"
-            widget: "object"
-            fields:
-              - {label: "Disable", name: "disabled", widget: "boolean"}
-              - {label: "Pro Version", name: "pro", widget: "boolean"}
+              # Optional, global disable switch for fontawesome related files
+              # For custom fontawesome js files use the custom.js method
+              - label: "FontAwesome Settings"
+                name: "params.fontawesome"
+                widget: "object"
+                fields:
+                  - {label: "Disable", name: "disabled", widget: "boolean"}
+                  - {label: "Pro Version", name: "pro", widget: "boolean"}
 
           - label: "FrontMatter"
             name: "frontmatter"
