@@ -8,7 +8,7 @@ backend:
   name: git-gateway
 
 ## Make sure the backend repo host is supported before enabling this.
-#publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 site_url: "https://gaudimonium-main-70b810.netlify.com"
 
