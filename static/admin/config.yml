@@ -75,25 +75,16 @@ collections:
                   - {label: "Favicon Icon Sizes", name: "favicon_ico_sizes", widget: "string", default: "16x16 32x32"}
                   - label: "Favicon .ico"
                     name: "favicon_ico_sizes"
-                    widget: "image"
-                    default: "favicon.ico"
-                    media_library:
-                      config:
-                        multiple: false
+                    widget: "hidden"
+                    default: "images/favicon.ico"
                   - label: "Favicon .png"
                     name: "favicon_png"
-                    widget: "image"
-                    default: "favicon.png"
-                    media_library:
-                      config:
-                        multiple: false
+                    widget: "hidden"
+                    default: "images/favicon.png"
                   - label: "Favicon .svg"
                     name: "favicon_svg"
-                    widget: "image"
-                    default: "favicon.svg"
-                    media_library:
-                      config:
-                        multiple: false
+                    widget: "hidden"
+                    default: "images/favicon.svg"
 
               - label: "Color Settings"
                 name: "colors"
