@@ -8,13 +8,182 @@ backend:
   name: git-gateway
 
 ## Make sure the backend repo host is supported before enabling this.
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 site_url: "https://example.com"
 
 ## These paths should match where the chosen theme looks for images.
-media_folder: ""
-public_folder: ""
+media_folder: "public/static"
+public_folder: "/static"
 
 ## https://www.netlifycms.org/docs/collection-types/
-#collections:
+collections:
+
+## Match 'config.toml'
+  - name: "settings"
+    label: "Settings"
+    create: false
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "config.toml"
+        label: "Site Settings"
+        name: "site"
+        description: >
+          Configuration for the site itself.
+        fields:
+          # Core Settings
+          - {label: "BaseURL", name: "baseurl", widget: "hidden", default: "/"}
+          - {label: "LanguageCode", name: "languageCode", widget: "hidden", default: "en-us"}
+          - {label: "Language", name: "language", widget: "hidden", default: "en"}
+          - {label: "Title", name: "title", widget: "string"}
+
+          # Theme Settings
+          - {label: "Themes Dir", name: "themesDir", widget: "hidden", default: "themes"}
+          - {label: "Theme", name: "theme", widget: "hidden", default: "syna"}
+
+          # Build Settings
+          - {label: "Enable Git Info", name: "enableGitInfo", widget: "boolean"}
+          - {label: "Build Draft Content", name: "buildDrafts", widget: "hidden", default: false}
+          - {label: "Build Future Content", name: "buildFuture", widget: "hidden", default: false}
+          - {label: "Build Expired Content", name: "buildExpired", widget: "hidden", default: false}
+          - {label: "Relative URLs", name: "relativeURLs", widget: "hidden", default: true}
+          - {label: "Disable RSS", name: "disableRSS", widget: "boolean", default: true}
+          - {label: "Enable 'robots.txt'", name: "enableRobotsTXT", widget: "hidden", default: true}
+          - {label: "Disabled Kinds", name: "disableKinds", widget: "list"}
+          - {label: "Ignore Files", name: "ignorefiles", widget: "list"}
+
+          - label: "Site Settings"
+            name: "params"
+            widget: "object"
+            fields:
+              - {label: "Site Name", name: "name", widget: "string"}
+              - {label: "Site Description", name: "description", widget: "string"}
+              - {label: "Debug Mode", name: "debug", widget: "boolean"}
+
+              # Enables ?event=type format of url events.
+              - {label: "Unsafe Events", name: "unsafeEvents", widget: "boolean"}
+
+              # - label: "Style Params"
+              #   name: "params.style"
+              #   widget: "object"
+              #   fields:
+              #     - {label: "Background", name: "background", widget: "string", default: "secondary"}
+              
+              - label: "Favicon Settings"
+                name: "params.custom"
+                widget: "object"
+                fields:
+                  - {label: "Favicon Icon Sizes", name: "favicon_ico_sizes", widget: "string", default: "16x16 32x32"}
+                  - label: "Favicon .ico"
+                    name: "favicon"
+                    widget: "image"
+                    default: "favicon.ico"
+                    media_library:
+                      config:
+                        multiple: false
+                  - label: "Favicon .png"
+                    name: "favicon"
+                    widget: "image"
+                    default: "favicon.png"
+                    media_library:
+                      config:
+                        multiple: false
+                  - label: "Favicon .svg"
+                    name: "favicon"
+                    widget: "image"
+                    default: "favicon.svg"
+                    media_library:
+                      config:
+                        multiple: false
+
+          - label: "Color Settings"
+            name: "params.colors"
+            widget: "object"
+            fields:
+              - {label: "Primary", name: "primary", widget: "string", default: "#00838F"}
+              - {label: "Secondary", name: "secondary", widget: "string", default: "#868e96"}
+              - {label: "Success", name: "success", widget: "string", default: "#008f54"}
+              - {label: "Info", name: "info", widget: "string", default: "#00c9dc"}
+              - {label: "Warning", name: "warning", widget: "string", default: "#fdf314"}
+              - {label: "Danger", name: "danger", widget: "string", default: "#dc1200"}
+              - {label: "Light", name: "light", widget: "string", default: "#f8f9fa"}
+              - {label: "Dark", name: "dark", widget: "string", default: "#343a40"}
+
+          # Optional, global disable switch for fontawesome related files
+          # For custom fontawesome js files use the custom.js method
+          - label: "FontAwesome Settings"
+            name: "params.fontawesome"
+            widget: "object"
+            fields:
+              - {label: "Disable", name: "disabled", widget: "boolean"}
+              - {label: "Pro Version", name: "pro", widget: "boolean"}
+
+          - label: "FrontMatter"
+            name: "frontmatter"
+            widget: "object"
+            fields:
+              - {label: "Date", name: "date", widget: "list"}
+              - {label: "LastMod", name: "lastmod", widget: "list"}
+
+          - label: "Outputs"
+            name: "outputs"
+            widget: "object"
+            fields:
+              - {label: "Home", name: "home", widget: "list"}
+
+          # - label: "Piwik Tracking"
+          #   name: "params.analytics.piwik"
+          #   widget: "object"
+          #   fields:
+          #     - {label: "URL", name: "url", widget: "string"}
+          #     - {label: "ID", name: "id", widget: "string"}
+          #     - {label: "Domain", name: "domain", widget: "string", default: "*"}
+          #     - {label: "Integrity-check hash (optional)", name: "hash", widget: "string"}
+
+# main/prepend/postpend menus are displayed in nav fragment.
+# footer/footer_social menus are displayed in footer fragment.
+# copyright_footer menus are displayed in copyright fragment
+# Keep an eye out for updates. These will be moved out to make navbar more
+# configurable.
+# [[menu.main]]
+#   url = "/"
+#   name = "Home"
+#   weight = 10
+
+# [[menu.main]]
+#   url = "/fragments"
+#   name = "Fragments"
+#   weight = 20
+
+# [[menu.main]]
+#   url = "/docs"
+#   name = "Docs"
+#   weight = 30
+
+# [[menu.main]]
+#   url = "/about"
+#   name = "About"
+#   weight = 40
+
+# [[menu.footer]]
+#   url = "https://syna.okkur.org/demo"
+#   name = "Getting Started"
+#   weight = 10
+
+# [[menu.footer]]
+#   url = "https://about.okkur.org/"
+#   name = "About Okkur Labs"
+#   weight = 20
+
+# [[menu.footer_social]]
+#   weight = 30
+#   name = "github"
+#   url = "https://syna.okkur.org/code"
+#   pre = "fab fa-github fa-stack-2x"
+
+# [[menu.copyright_footer]]
+#   url = "/about"
+#   name = "About Us"
+#   weight = 10
