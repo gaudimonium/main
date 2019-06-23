@@ -13,7 +13,7 @@ publish_mode: editorial_workflow
 site_url: "https://gaudimonium-main-70b810.netlify.com"
 
 ## These paths should match where the chosen theme looks for images.
-media_folder: "public/static"
+media_folder: "static/images"
 public_folder: "/static"
 
 ## https://www.netlifycms.org/docs/collection-types/
