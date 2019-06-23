@@ -77,21 +77,21 @@ collections:
                 fields:
                   - {label: "Favicon Icon Sizes", name: "favicon_ico_sizes", widget: "string", default: "16x16 32x32"}
                   - label: "Favicon .ico"
-                    name: "favicon"
+                    name: "favicon_ico_sizes"
                     widget: "image"
                     default: "favicon.ico"
                     media_library:
                       config:
                         multiple: false
                   - label: "Favicon .png"
-                    name: "favicon"
+                    name: "favicon_png"
                     widget: "image"
                     default: "favicon.png"
                     media_library:
                       config:
                         multiple: false
                   - label: "Favicon .svg"
-                    name: "favicon"
+                    name: "favicon_svg"
                     widget: "image"
                     default: "favicon.svg"
                     media_library:
