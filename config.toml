@@ -11,7 +11,7 @@ ignorefiles = ["content/dev/.*"]
 debug = true
 description = "The project known as Project Gaudimonium"
 name = "Project Gaudimonium"
-unsafeEvents = true
+unsafeEvents = false
 
 [params.colors]
 danger = "#dc1200"
