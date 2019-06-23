@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Okkur - Syna!"
+title = "Gaudimonium"
 themesDir = "themes"
 theme = "syna"
 enableGitInfo = true
@@ -9,8 +9,8 @@ ignorefiles = ["content/dev/.*"]
 
 [params]
 debug = true
-description = "Open Source Theme for your next project"
-name = "Okkur Labs"
+description = "The project known as Project Gaudimonium"
+name = "Project Gaudimonium"
 unsafeEvents = true
 
 [params.colors]
