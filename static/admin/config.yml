@@ -17,4 +17,4 @@ media_folder: ""
 public_folder: ""
 
 ## https://www.netlifycms.org/docs/collection-types/
-collections:
+#collections:
