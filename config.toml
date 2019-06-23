@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Gaudimonium"
 themesDir = "themes"
 theme = "syna"
-enableGitInfo = true
+enableGitInfo = false
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 ignorefiles = ["content/dev/.*"]
 
