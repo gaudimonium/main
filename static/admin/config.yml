@@ -69,7 +69,7 @@ collections:
               #     - {label: "Background", name: "background", widget: "string", default: "secondary"}
               
               - label: "Favicon Settings"
-                name: "params.custom"
+                name: "custom"
                 widget: "object"
                 fields:
                   - {label: "Favicon Icon Sizes", name: "favicon_ico_sizes", widget: "string", default: "16x16 32x32"}
@@ -96,7 +96,7 @@ collections:
                         multiple: false
 
               - label: "Color Settings"
-                name: "params.colors"
+                name: "colors"
                 widget: "object"
                 fields:
                   - {label: "Primary", name: "primary", widget: "string", default: "#00838F"}
@@ -111,7 +111,7 @@ collections:
               # Optional, global disable switch for fontawesome related files
               # For custom fontawesome js files use the custom.js method
               - label: "FontAwesome Settings"
-                name: "params.fontawesome"
+                name: "fontawesome"
                 widget: "object"
                 fields:
                   - {label: "Disable", name: "disabled", widget: "boolean"}
