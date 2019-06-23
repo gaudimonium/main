@@ -24,7 +24,7 @@ success = "#008f54"
 warning = "#fdf314"
 
 [params.custom]
-favicon_ico_sizes = "16x16 32x32"
+favicon_ico_sizes = "16x16 32x32 64x64"
 favicon_png = "/static/favicon.png"
 favicon_svg = "/static/favicon.svg"
 
