@@ -48,9 +48,6 @@ collections:
           - {label: "Build Draft Content", name: "buildDrafts", widget: "hidden", default: false}
           - {label: "Build Future Content", name: "buildFuture", widget: "hidden", default: false}
           - {label: "Build Expired Content", name: "buildExpired", widget: "hidden", default: false}
-          - {label: "Relative URLs", name: "relativeURLs", widget: "hidden", default: true}
-          - {label: "Disable RSS", name: "disableRSS", widget: "boolean", default: true}
-          - {label: "Enable 'robots.txt'", name: "enableRobotsTXT", widget: "hidden", default: true}
           - {label: "Disabled Kinds", name: "disableKinds", widget: "list"}
           - {label: "Ignore Files", name: "ignorefiles", widget: "list"}
 
