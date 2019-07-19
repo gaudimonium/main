@@ -8,6 +8,8 @@ RSYNC ?= rsync
 
 SRC_DIR = .
 BLD_DIR = public
+CONTENT_SRC = content_src
+CONTENT_DIR = content
 
 env:
 	-$(DEVD) --version
@@ -22,7 +24,13 @@ deps:
 dev-server:
 	$(DEVD) $(DEVD_OPTS)
 
-build: env
+# https://stackoverflow.com/questions/40621451/makefile-automatically-compile-all-c-files-keeping-o-files-in-separate-folde
+CONTENT_FILES := $(wildcard $(CONTENT_SRC)/*.md)
+
+content: $(CONTENT_FILES)
+	$(foreach file, $^,(mkdir -p $(CONTENT_DIR)/$(notdir $(basename $(file))) && cp -v $(file) $(CONTENT_DIR)/$(notdir $(basename $(file)))/index.md) &&) :
+
+build: env content
 	mkdir -p $(BLD_DIR)
 	$(RSYNC) -avP --delete $(SRC_DIR)/static/* $(BLD_DIR)/
 	$(HUGO) $(HUGO_OPTS)
@@ -31,4 +39,5 @@ watch:
 	$(MODD)
 
 clean:
+	rm -rf $(CONTENT_DIR)
 	rm -rf $(BLD_DIR)
