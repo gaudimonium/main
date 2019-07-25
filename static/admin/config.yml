@@ -19,7 +19,7 @@ public_folder: "/static"
 ## https://www.netlifycms.org/docs/collection-types/
 collections:
 
-## Match 'config.toml'
+  ## Match 'config.toml'
   - name: "settings"
     label: "Settings"
     create: false
@@ -166,3 +166,14 @@ collections:
 #   url = "/about"
 #   name = "About Us"
 #   weight = 10
+
+
+  ## Content
+  - name: "pages"
+    label: "Pages"
+    folder: "content_src"
+    create: true
+    delete: true
+    editor:
+      preview: true
+    extension: "toml-frontmatter"
