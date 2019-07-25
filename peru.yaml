@@ -3,12 +3,12 @@
 ---
 
 imports:
-  hugo-theme-syna: themes/syna
+  hugo-theme-learn: themes/learn
   netlify-cms: static/admin
 
-git module hugo-theme-syna:
-  url: https://gitlab.com/gaudimonium/components/hugo-theme-syna.git
-  rev: 2581b87a4528a8f4cdfaf7a9c322d161b96b4fd7
+git module hugo-theme-learn:
+  url: https://gitlab.com/gaudimonium/components/hugo-theme-learn.git
+  rev: 02315785f235945af62dde34cb68920117b75ecd
 
 git module netlify-cms:
   url: https://gitlab.com/gaudimonium/components/netlify-cms.git
